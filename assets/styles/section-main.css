@@ -1,0 +1,39 @@
+.section-main {
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+}
+
+.section-main img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    transform: translateX(-100%);
+    transition: .8s ease-out;
+}
+
+.section-main h1 {
+    font-size: 50px;
+    transition: .5s ease-out;
+    transform: translateY(-100%);
+}
+
+.section-main h2 {
+    font-size: 23px;
+    font-weight: 300;
+    transition: .8s ease-out;
+    transform: translateY(100%);
+}
+
+.section-main img.-animated {
+    transform: translateX(5%);
+}
+
+.section-main h1.-animated,
+.section-main h2.-animated {
+    transform: translateY(0);
+}
+
+.title, .subtitle, .photo {
+    overflow: hidden;
+}
