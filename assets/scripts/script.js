@@ -17,6 +17,6 @@ $(document).ready(function() {
         $('.section-main img').addClass('-animated');
         $('.section-main h1').addClass('-animated');
         $('.section-main h2').addClass('-animated');
-
-    }, 2000);
+        $('.social').addClass('-animated');
+    }, 3000);
 });

@@ -6,8 +6,8 @@
 }
 
 .content {
-    z-index: 2;
-    margin-left: 80px;
+    width: 20%;
+    margin: 0 40%;
 }
 
 .section-main img {
@@ -52,7 +52,6 @@ canvas {
     position: absolute;
     display: block;
     vertical-align: bottom;
-    z-index: 1;
 }
 
 #particles-js {
