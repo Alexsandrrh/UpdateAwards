@@ -2,6 +2,12 @@
     height: calc(100vh - 60px);
     display: flex;
     align-items: center;
+    user-select: none;
+}
+
+.content {
+    z-index: 2;
+    margin-left: 80px;
 }
 
 .section-main img {
@@ -16,6 +22,7 @@
     font-size: 50px;
     transition: .5s ease-out;
     transform: translateY(-100%);
+    color: white;
 }
 
 .section-main h2 {
@@ -23,6 +30,7 @@
     font-weight: 300;
     transition: .8s ease-out;
     transform: translateY(100%);
+    color: white;
 }
 
 .section-main img.-animated {
@@ -36,4 +44,21 @@
 
 .title, .subtitle, .photo {
     overflow: hidden;
+}
+
+/*Particle*/
+
+canvas {
+    position: absolute;
+    display: block;
+    vertical-align: bottom;
+    z-index: 1;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    background-image: url("../img/john-towner-154060-unsplash.jpg");
+    background-size: cover;
+    transition: 1s ease-out;
 }
