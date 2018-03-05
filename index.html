@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/styles/container.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/header.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/section-main.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/modal.css">
 </head>
 <body>
 <header class="header">
@@ -26,7 +27,7 @@
 				<li><a href="">Home</a></li>
 				<li><a href="">About</a></li>
 				<li><a href="">Works</a></li>
-				<li><a href="tel:+79117724104">Call</a></li>
+				<li><a href="" class="js-modal-toggle">Contacts</a></li>
 			</ul>
 		</div>
 		<div class="desktop-nav">
@@ -34,29 +35,48 @@
 				<a href="">Home</a>
 				<a href="">About</a>
 				<a href="">Work</a>
+				<a href="" class="js-modal-toggle">Contacts</a>
 			</div>
-			<a href="tel:+79117724104">Call Me</a>
 		</div>
 	</div>
 </header>
 <section class="section-main" id="particles-js">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="content">
 			<div class="photo">
 				<img src="assets/img/myphoto.jpg" alt="ava Alex">
 			</div>
 			<div class="title">
-				<h1>Hello</h1>
+				<h1>Hello,</h1>
 			</div>
 			<div class="title">
-				<h1>Alexsandr</h1>
+				<h1>I'm Alexsandr</h1>
 			</div>
 			<div class="subtitle">
-				<h2>See you again</h2>
+				<h2>Web Developer for AnalytiX</h2>
 			</div>
 		</div>
 	</div>
 </section>
+<div class="modal">
+	<div class="modal-content">
+		<div class="modal-links">
+			<a href="https://github.com/Alexsandrrh">
+				<img src="assets/img/socials/icons8-github-100.png" alt="git">
+			</a>
+			<a href="https://vk.com/sascha.sadov">
+				<img src="assets/img/socials/icons8-vk-circled-100.png" alt="vk">
+			</a>
+			<a href="mailto:sascha.sadov@yandex.ru">
+				<img src="assets/img/socials/icons8-email-100.png" alt="email">
+			</a>
+			<div class="modal-toggle js-modal-toggle"></div>
+		</div>
+		<div class="modal-map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7983.836265197403!2d30.315297249999997!3d59.98258884999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1520260632624" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/scripts/script.js"></script>
 <script type="text/javascript" src="assets/scripts/lib/particles.js"></script>

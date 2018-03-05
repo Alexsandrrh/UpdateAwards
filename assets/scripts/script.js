@@ -9,8 +9,22 @@ $(document).ready(function() {
     $('#particles-js').css({
         'background-image': 'url(assets/img/' + backgrounds [Math.floor(Math.random()  * (4 - 0) + 0)] + ')'
     })
+
+    let modalToggle = $('.js-modal-toggle'),
+    modal = $('.modal'),
+    mobileNav = $('.mobile-nav');
+
 	$('.nav-toggle').click(function () {
-        $('.mobile-nav').toggleClass('-open');
+        mobileNav.toggleClass('-open');
+    })
+
+    mobileNav.click(function () {
+        $('.mobile-nav a').removeClass('-open');
+    })
+
+    modalToggle.click(function ($event) {
+        event.preventDefault();
+        modal.toggleClass('-active');
     })
 
     setTimeout(function () {

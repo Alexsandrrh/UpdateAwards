@@ -1,0 +1,63 @@
+.modal {
+    position: fixed;
+    top: 200px;
+    left: 10px;
+    width: calc(100% - 20px);
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: 1.2s ease-out;
+}
+
+.modal.-active {
+    height: 300px;
+}
+
+.modal-links {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.modal-map {
+    height: 200px;
+}
+
+.modal-links a {
+    width: 50px;
+    margin: 0 auto;
+}
+
+.modal-links img {
+    width: 50px;
+}
+
+.modal-toggle {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.modal-toggle:before,
+.modal-toggle:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 21px;
+    height: 1px;
+    background-color: #565656;
+}
+
+.modal-toggle:before {
+    transform: rotate(-45deg) translateY(50%);
+}
+
+.modal-toggle:after {
+    transform: rotate(45deg) translateY(50%);
+}
