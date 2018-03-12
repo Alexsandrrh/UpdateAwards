@@ -7,46 +7,44 @@ $(document).ready(function() {
     ]
 
     var modalElements = [
-        '.modal-links a',
+        '.modal-links a:eq(0)',
+        '.modal-links a:eq(1)',
+        '.modal-links a:eq(2)',
         '.modal-toggle',
-        '.modal-map iframe'
-    ]
-
-    $('')
+        '.modal-map'
+    ];
 
     $('#particles-js').css({
         'background-image': 'url(assets/img/' + backgrounds [Math.floor(Math.random()  * (4 - 0) + 0)] + ')'
-    })
+    });
 
-    var modalToggle = $('.js-modal-toggle'),
+    let modalToggle = $('.js-modal-toggle'),
     modal = $('.modal'),
     mobileNav = $('.mobile-nav');
 
 	$('.nav-toggle').click(function () {
         mobileNav.toggleClass('-open');
         modal.removeClass('-active');
-        for (i = 0; i < 3; i++) {
-            $(modalElements[i]).removeClass('-zero');
-        }
-    })
+    });
 
     $('.mobile-nav a').click(function () {
         mobileNav.removeClass('-open');
-    })
+    });
 
     modalToggle.click(function ($event) {
         event.preventDefault();
-        modal.toggleClass('-active');
-        for (i = 0; i < 3; i++) {
-                $(modalElements[i]).addClass('-zero');
-        }
-    })
+        showHideModal();
+    });
 
-    $('.modal-toggle').click(function () {
-        for (i = 0; i < 3; i++) {
-            $(modalElements[i]).removeClass('-zero');
+    function showHideModal () {
+        modal.toggleClass('-active');
+        for (let i = 0; i < modalElements.length; i++) {
+            let delay = i * 300;
+            setTimeout(function () {
+                $(modalElements[i]).toggleClass('-action');
+            }, 300 + delay);
         }
-    })
+    }
 
     setTimeout(function () {
         $('.section-main img').addClass('-animated');

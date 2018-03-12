@@ -27,32 +27,19 @@
 .modal-map {
     height: 200px;
     overflow: hidden;
-    transition: 2s;
-}
-
-.modal-map iframe {
     transform: translateY(100%);
     transition: .5s ease-out;
 }
 
-
+.modal-map iframe {
+    padding: 5px;
+}
 
 .modal-links a {
     width: 50px;
     margin: 0 auto;
     transform: translateY(-150%);
-}
-
-.modal-links a:first-child {
-    transition: .2s ease-out;
-}
-
-.modal-links a:nth-child(2) {
-    transition: .4s ease-out;
-}
-
-.modal-links a:nth-child(3) {
-    transition: .6s ease-out;
+    transition: .2s;
 }
 
 .modal-links img {
@@ -85,9 +72,15 @@
 .modal-toggle:after {
     transform: rotate(45deg) translateY(50%);
 }
-.modal-links a.-zero,
-.modal-map iframe.-zero {
+.modal-links a.-action,
+.modal-map.-action {
     transform: translate(0);
+}
+
+@media screen and (min-width: 482px) {
+    .modal {
+        width: 300px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
