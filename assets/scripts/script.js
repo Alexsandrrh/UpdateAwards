@@ -1,30 +1,51 @@
 $(document).ready(function() {
-    let backgrounds = [
+    var backgrounds = [
         'bg-main1.jpg',
         'bg-main2.jpg',
         'bg-main3.jpg',
         'bg-main4.jpg'
     ]
 
+    var modalElements = [
+        '.modal-links a',
+        '.modal-toggle',
+        '.modal-map iframe'
+    ]
+
+    $('')
+
     $('#particles-js').css({
         'background-image': 'url(assets/img/' + backgrounds [Math.floor(Math.random()  * (4 - 0) + 0)] + ')'
     })
 
-    let modalToggle = $('.js-modal-toggle'),
+    var modalToggle = $('.js-modal-toggle'),
     modal = $('.modal'),
     mobileNav = $('.mobile-nav');
 
 	$('.nav-toggle').click(function () {
         mobileNav.toggleClass('-open');
+        modal.removeClass('-active');
+        for (i = 0; i < 3; i++) {
+            $(modalElements[i]).removeClass('-zero');
+        }
     })
 
-    mobileNav.click(function () {
-        $('.mobile-nav a').removeClass('-open');
+    $('.mobile-nav a').click(function () {
+        mobileNav.removeClass('-open');
     })
 
     modalToggle.click(function ($event) {
         event.preventDefault();
         modal.toggleClass('-active');
+        for (i = 0; i < 3; i++) {
+                $(modalElements[i]).addClass('-zero');
+        }
+    })
+
+    $('.modal-toggle').click(function () {
+        for (i = 0; i < 3; i++) {
+            $(modalElements[i]).removeClass('-zero');
+        }
     })
 
     setTimeout(function () {
